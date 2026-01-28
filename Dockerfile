@@ -29,5 +29,5 @@ COPY --chown=grmw:grmw requirements.txt /opt/grmw/
 RUN pip3 install -r requirements.txt --user --no-warn-script-location
 RUN python setup.py
 
-EXPOSE 5013/tcp
+EXPOSE 8002/tcp
 CMD ["python", "app.py"]
