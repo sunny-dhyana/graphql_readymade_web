@@ -76,7 +76,7 @@ def pump_db():
     paste.public = False
     paste.owner_id = owner.id
     paste.owner = owner
-    paste.ip_addr = '127.0.0.1'
+    paste.ip_addr = '0.0.0.0'
     paste.user_agent = 'User-Agent not set'
     db.session.add(paste)
 
@@ -86,7 +86,7 @@ def pump_db():
     paste.public = False
     paste.owner_id = owner.id
     paste.owner = owner
-    paste.ip_addr = '127.0.0.1'
+    paste.ip_addr = '0.0.0.0'
     paste.user_agent = 'User-Agent not set'
     db.session.add(paste)
 
