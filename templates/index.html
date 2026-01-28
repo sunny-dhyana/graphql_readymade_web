@@ -1,0 +1,99 @@
+{% extends 'partials/base.html' %}
+
+{% block header %}
+{% include 'partials/base_header.html' %}
+{% endblock %}
+
+{% block content %}
+<!-- Page Content -->
+<div id="page-content-wrapper">
+  {% include 'partials/navbar.html' %}
+  <div class="container-fluid">
+    {% if msg %}
+    <div class="alert alert-info">
+      <h4 class="alert-heading">System Message</h4>
+      <p>{{msg}}</p>
+    </div>
+    {% endif %}
+
+    <h1 class="mt-4">GraphQL ReadyMade Web</h1>
+    <hr />
+
+    <h4>Welcome!</h4>
+    <p>
+      GraphQL ReadyMade Web is a simple demonstration application built using GraphQL.
+      It provides a ready-to-use backend API along with a web interface to explore queries, mutations, and
+      subscriptions.
+    </p>
+
+    <br />
+
+    <h4>Getting Started</h4>
+    <p>
+      This application exposes a GraphQL endpoint that you can interact with using the built-in UI
+      or any GraphQL client such as Apollo, Insomnia, or curl.
+    </p>
+    <p>
+      Use the navigation menu to explore available features and try out different queries.
+      The API supports standard GraphQL operations and follows common schema conventions.
+    </p>
+
+    <br />
+
+    <h4>Application Modes</h4>
+    <p>
+      The application supports multiple operating modes that can be configured globally.
+      These modes control how the server processes and validates GraphQL requests.
+    </p>
+    <p>
+      You can switch modes from the top bar menu or by sending the HTTP header
+      <code>X-GRMW-MODE</code> with your requests.
+    </p>
+    <p>
+      If no mode is specified, the application will use the default configuration.
+    </p>
+
+    <br />
+
+    <h4>Mode Overview</h4>
+    <h5>Standard</h5>
+    <p>
+      The Standard mode provides a straightforward GraphQL setup with minimal constraints,
+      suitable for development and experimentation.
+    </p>
+
+    <h5>Advanced</h5>
+    <p>
+      The Advanced mode enables additional query validation and performance controls,
+      such as depth limits and request analysis, making it more suitable for production-like usage.
+    </p>
+
+    <br />
+
+    <h4>GraphQL Resources</h4>
+    <p>
+      If you're new to GraphQL or want to learn more about its features,
+      the following resources may be helpful:
+    </p>
+    <h5><i class="fa fa-play"></i> &nbsp; Videos</h5>
+    <ul>
+      <li>
+        <a href="https://www.youtube.com/watch?v=ZQL7tL2S0oQ" target="_blank">
+          GraphQL in 40 Minutes
+        </a>
+      </li>
+    </ul>
+
+    <h4>Feedback</h4>
+    <p>
+      Have feedback or suggestions? Feel free to open an issue or contribute on
+      <a href="https://github.com/issues">GitHub</a>.
+    </p>
+  </div>
+</div>
+<!-- /#page-content-wrapper -->
+{% endblock %}
+
+{% block scripts %}
+{% include 'partials/base_scripts.html' %}
+{% endblock %}
