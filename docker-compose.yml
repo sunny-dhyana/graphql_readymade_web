@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  grmw:
+    container_name: grmw
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        TARGET_FOLDER: /opt/grmw
+    image: grmw:latest
+    ports:
+      - "8002:8002"
+    restart: unless-stopped
+    environment:
+      PYTHONUNBUFFERED: "1"
+    command: ["python", "app.py"]
